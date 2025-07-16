@@ -142,15 +142,15 @@ export default function Portfolio() {
 
   const education = [
     {
-      degree: "Bachelor of Computer Apllications",
-      institution: "Ims Noida",
+      degree: "Bachelor of Computer Aplications",
+      institution: "IMS Noida",
       year: "2020 - 2023",
       grade: "CGPA: 7.5/10",
       specialization: "Cybersecurity & Software Development",
     },
     {
       degree: "High School",
-      institution: "A.n College,Patna",
+      institution: "A.N College, Patna",
       year: "2016 - 2018",
       grade: "CGPA: 7.5/10",
     },
