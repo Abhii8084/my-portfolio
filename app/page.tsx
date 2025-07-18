@@ -125,18 +125,18 @@ export default function Portfolio() {
       live: "https://preview-full-stack-project-ideas-kzmow23fhl5evtbbp7c7.vusercontent.net/",
       image: "/receipe-finder.png?height=200&width=300",
       type: "Ingredient-Based Search",
-      featured: false,
+      featured: true,
     },
     {
       title: "Secure Chat Application",
       description:
         "End-to-end encrypted messaging application with perfect forward secrecy, secure key exchange, and message integrity verification.",
       tech: ["Vue.js", "Node.js", "Socket.io", "Crypto-js", "MongoDB"],
-      github: "https://github.com/abhishekraj/secure-chat",
-      live: "https://secure-chat-demo.vercel.app",
-      image: "/placeholder.svg?height=200&width=300",
+      github: "https://github.com/Abhii8084/secure-chat",
+      live: "https://preview-secure-chat-application-kzmg86oy07pxa99bar0x.vusercontent.net/",
+      image: "/secure-chat.png?height=200&width=300",
       type: "Full-Stack + Security",
-      featured: false,
+      featured: true,
     },
   ]
 
@@ -291,10 +291,10 @@ export default function Portfolio() {
                 isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              {/* <Avatar className="w-32 h-32 mx-auto ring-2 ring-slate-700/50 ring-offset-4 ring-offset-slate-950 transition-all duration-300 hover:ring-blue-400/50">
-                <AvatarImage src="/my-pic.png?height=128&width=128" alt="Abhishek Raj" />
+              <Avatar className="w-32 h-32 mx-auto ring-2 ring-slate-700/50 ring-offset-4 ring-offset-slate-950 transition-all duration-300 hover:ring-blue-400/50">
+                <AvatarImage src="/my-pic.jpeg?height=200&width=200" alt="Abhishek Raj" />
                 <AvatarFallback className="text-2xl bg-slate-800 text-slate-200">AR</AvatarFallback>
-              </Avatar> */}
+              </Avatar>
               <div className="absolute -top-2 -right-2 animate-bounce">
                 <div className="w-8 h-8 bg-blue-500/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-blue-400/30">
                   <Shield className="w-4 h-4 text-blue-400" />
@@ -338,11 +338,20 @@ export default function Portfolio() {
                 View My Work
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button
+              <Button 
+              onClick={() => {
+    const link = document.createElement('a');
+    link.href = '/resume.pdf'; 
+    link.download = 'Abhishek-Raj-Resume.pdf'; 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }}
                 variant="outline"
                 size="lg"
                 className="border-slate-700 text-slate-300 hover:bg-slate-800 hover:text-white transition-all duration-300 hover:scale-105 group bg-transparent"
               >
+                
                 <Download className="mr-2 h-4 w-4 group-hover:animate-bounce" />
                 Download Resume
               </Button>
